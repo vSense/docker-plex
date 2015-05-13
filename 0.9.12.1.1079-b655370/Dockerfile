@@ -5,9 +5,9 @@ MAINTAINER Kevin Lefevre <klefevre@vsense.fr> (@archifleks)
 ENV PKGVER 0.9.12.1.1079-b655370
 
 RUN opkg-install libstdcpp \
-    && wget http://downloads.plex.tv/plex-media-server/$PKGVER/plexmediaserver_$PKGVER_amd64.deb -P /tmp \
+    && wget http://downloads.plex.tv/plex-media-server/"$PKGVER"/plexmediaserver_"$PKGVER"_amd64.deb -P /tmp \
     && cd /tmp \
-    && ar vx plexmediaserver_$PKGVER_amd64.deb \
+    && ar vx plexmediaserver_"$PKGVER"_amd64.deb \
     && gzip -d data.tar.gz \
     && tar xf data.tar \
     && mv ./usr/lib/plexmediaserver /opt/. \
