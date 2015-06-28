@@ -15,6 +15,7 @@ RUN opkg-install libstdcpp \
     && mkdir -p /config /library \
     && adduser -D -h /config -s /sbin/nologin -u 5001 plex \
     && chown -R plex:plex /config /library
+    && ln -s /lib/libc.so.0 /opt/plexmediaserver/libc.so
 
 COPY start.sh /start.sh
 
