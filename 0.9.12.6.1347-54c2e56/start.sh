@@ -12,10 +12,4 @@ export PLEX_MEDIA_SERVER_TMPDIR=/tmp
 export PLEX_MEDIA_SERVER_USER=plex
 
 # Run Plex in background
-/opt/plexmediaserver/"Plex Media Server" &
-
-# Wait Plex init
-sleep 5
-
-# Tail Plex logs for docker logs output
-tail -f /config/"Plex Media Server"/Logs/**/*.log
+/opt/plexmediaserver/"Plex Media Server"
