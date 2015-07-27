@@ -65,3 +65,5 @@ ExecReload=/usr/bin/docker restart plex
 [Install]
 WantedBy=multi-user.target
 ```
+
+Or you can write an init script if you live in 2010 :p
