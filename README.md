@@ -22,7 +22,7 @@ Of course you can mount as many volumes as you want, the base volumes are here t
 
 ## How to choose a tag
 
-There is no particular reason you should run anything but latest, we will keep some older version Dockerfile if there are still available on plex.tv.
+There is no particular reason you should run anything but latest version. If you deal with any problem after an upgrade, we will keep some older Dockerfile versions for compatibility, if they are still available on plex.tv.
 
 For exemple:
 
@@ -31,8 +31,8 @@ For exemple:
 
 ## Initial Setup
 
-On the first run if you are not on localhost (eg. remote server) you will get "You do not have permission to access this server" if you connect to the 32400 port.
-The solution is to temporary create an SSH Tunnel to the remote host :
+During the first run, if you are not on localhost (eg. remote server), you will get "You do not have permission to access this server" when connecting to the 32400 port in your browser.
+The solution is to temporary create an SSH Tunnel to the remote host:
 
 `ssh -L 32400:remote_host:32400 root@remote_host`
 
