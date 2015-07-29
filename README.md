@@ -15,7 +15,7 @@ This image contains 2 volumes you can override with host or data containers volu
 - /config : plex configuration files
 
 ```
-docker run -d -v /your/config/path:/config -v /your/library/path -p 32400:32400 vsense/plex
+docker run -d -v /your/config/path:/config -v /your/library/path:/library -p 32400:32400 vsense/plex
 ```
 
 Of course you can mount as many volumes as you want, the base volumes are here to ensure image compatibility.
@@ -43,7 +43,7 @@ You can then access http://127.0.0.1:32400/web without issues and proceed with t
 You can use docker with --always to ensure container restart:
 
 ```
-docker run --restart=always -d -v /your/config/path:/config -v /your/library/path -p 32400:32400 vsense/plex
+docker run --restart=always -d -v /your/config/path:/config -v /your/library/path:/library -p 32400:32400 vsense/plex
 ```
 
 Or you can use a systemd unit:
