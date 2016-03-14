@@ -4,8 +4,7 @@ MAINTAINER vSense <docker@vsense.fr> (@archifleks)
 
 ENV PKGVER 0.9.16.1.1794-af21b7e
 
-RUN opkg-install libstdcpp \
-    && wget http://downloads.plex.tv/plex-media-server/"$PKGVER"/plexmediaserver_"$PKGVER"_amd64.deb -P /tmp \
+RUN wget http://downloads.plex.tv/plex-media-server/"$PKGVER"/plexmediaserver_"$PKGVER"_amd64.deb -P /tmp \
     && cd /tmp \
     && ar vx plexmediaserver_"$PKGVER"_amd64.deb \
     && gzip -d data.tar.gz \
