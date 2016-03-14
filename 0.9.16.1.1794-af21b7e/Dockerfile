@@ -19,10 +19,6 @@ RUN opkg-install libstdcpp \
 
 COPY start.sh /start.sh
 
-COPY libstdc++.so.6.0.21 /usr/lib/libstdc++.so.6.0.21
-
-RUN ln -s /usr/lib/libstdc++.so.6.0.21 /usr/lib/libstdc++.so.6
-
 RUN chmod +x start.sh
 
 VOLUME /config /library
