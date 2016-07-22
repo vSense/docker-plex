@@ -2,9 +2,9 @@ FROM progrium/busybox
 
 MAINTAINER vSense <docker@vsense.fr> (@archifleks)
 
-ENV PKGVER 0.9.16.4.1911-ee6e505
-
-RUN wget http://downloads.plex.tv/plex-media-server/"$PKGVER"/plexmediaserver_"$PKGVER"_amd64.deb -P /tmp \
+RUN opkg-install wget curl ca-certificates jsonfilter \
+    && PKGVER=`curl 'https://plex.tv/api/downloads/1.json?channel=plexpass' | jsonfilter -e '@.computer.Linux.version'` \
+    && wget https://downloads.plex.tv/plex-media-server/"$PKGVER"/plexmediaserver_"$PKGVER"_amd64.deb -P /tmp \
     && cd /tmp \
     && ar vx plexmediaserver_"$PKGVER"_amd64.deb \
     && gzip -d data.tar.gz \
