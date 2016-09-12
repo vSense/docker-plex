@@ -1,5 +1,7 @@
 ## What is plex
 
+[![](https://images.microbadger.com/badges/version/vsense/plex.svg)](http://microbadger.com/images/vsense/plex "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/vsense/plex.svg)](http://microbadger.com/images/vsense/plex "Get your own image badge on microbadger.com")
+
 Plex organizes your video, music, and photo collections and streams them to all of your screens
 
 > [More info](http://plex.tv)
@@ -22,12 +24,7 @@ Of course you can mount as many volumes as you want, the base volumes are here t
 
 ## How to choose a tag
 
-There is no particular reason you should run anything but latest version. If you deal with any problem after an upgrade, we will keep some older Dockerfile versions for compatibility, if they are still available on plex.tv.
-
-For exemple:
-
--   vsense/plex:latest (default)
--   vsense/plex:0.9.12.4.1192-9a47d21 (available version according to repository folders)
+There is no particular reason you should run anything but latest version.
 
 ## Initial Setup
 
