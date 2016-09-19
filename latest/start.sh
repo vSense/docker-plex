@@ -12,4 +12,4 @@ export PLEX_MEDIA_SERVER_TMPDIR=/tmp
 export PLEX_MEDIA_SERVER_USER=plex
 
 # Run Plex in background
-/opt/plexmediaserver/"Plex Media Server"
+exec /opt/plexmediaserver/"Plex Media Server"
