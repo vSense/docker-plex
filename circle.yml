@@ -5,6 +5,10 @@ dependencies:
   override:
     - docker info
     - docker build --rm=false -t vsense/plex .
+test:
+  override:
+    - docker run -d -p 32400:32400 vsense/plex; sleep 10
+    - curl --retry 10 --retry-delay 5 -v http://localhost:32400
 deployment:
   hub:
     branch: master
